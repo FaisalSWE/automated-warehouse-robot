@@ -1,0 +1,13 @@
+1. Start system and run diagnostics (battery, sensors, arm calibration).
+2. Scan warehouse layout using LIDAR and Cartographer SLAM, save map as .pgm.
+3. Read item tags (QR codes) using OpenCV to localize objects.
+4. Ensure gripper hygiene with UV sterilization if needed.
+5. Monitor temperature for cold storage compliance (0–5°C).
+6. Receive task (item ID, shelf location) from WMS via REST API.
+7. Plan optimal path to target shelf using A* algorithm in ROS.
+8. Avoid real-time obstacles using LIDAR and ultrasonic sensor feedback.
+9. Pick item with 6-DOF arm and soft gripper, verify with weight sensor.
+10. Navigate to drop-off zone following planned path.
+11. Place item accurately, verify with camera.
+12. Update inventory via MQTT to WMS.
+13. Repeat or return to charging station if no tasks or low battery.
