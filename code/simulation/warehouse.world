@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<sdf version="1.7">
+  <world name="warehouse">
+    <!-- Ground Plane -->
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>50 30</size>
+            </plane>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>50 30</size>
+            </plane>
+          </geometry>
+          <material>
+            <diffuse>0.7 0.7 0.7 1.0</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Warehouse Shelves -->
+    <model name="shelf_1">
+      <pose>5 0 0 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>1 5 2</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>1 5 2</size>
+            </box>
+          </geometry>
+          <material>
+            <diffuse>0.5 0.5 0.5 1.0</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Include Robot -->
+    <include>
+      <uri>model://warehouse_robot</uri>
+      <pose>0 0 0.3 0 0 0</pose>
+    </include>
+
+    <!-- Lighting -->
+    <light type="directional" name="sun">
+      <direction>-0.5 0.5 -1</direction>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+    </light>
+  </world>
+</sdf>
