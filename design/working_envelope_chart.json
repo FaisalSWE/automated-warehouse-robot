@@ -1,0 +1,40 @@
+{
+  "type": "scatter",
+  "data": {
+    "datasets": [
+      {
+        "label": "Arm Reach vs Payload",
+        "data": [
+          {"x": 0.6, "y": 5},
+          {"x": 0.8, "y": 4},
+          {"x": 1.0, "y": 3}
+        ],
+        "backgroundColor": "#1e90ff",
+        "borderColor": "#1e90ff"
+      }
+    ]
+  },
+  "options": {
+    "scales": {
+      "x": {
+        "title": {"display": true, "text": "Arm Reach (meters)"},
+        "min": 0,
+        "max": 1.2
+      },
+      "y": {
+        "title": {"display": true, "text": "Payload (kg)"},
+        "min": 0,
+        "max": 6
+      }
+    },
+    "plugins": {
+      "title": {
+        "display": true,
+        "text": "Working Envelope: Arm Reach vs Payload"
+      },
+      "legend": {
+        "display": true
+      }
+    }
+  }
+}
