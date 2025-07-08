@@ -84,9 +84,8 @@ See [`docs/working_envelope.md`](docs/working_envelope.md)
 
 ## Repository Structure
 
-[algorithm/    → Task execution logic
-design/       → Robot architecture and diagrams
-code/         → Arduino & ROS source files
-docs/         → Working envelope, specs, and planning
-README.md     → Project overview
-
+1. algorithm/    → Task execution logic
+2. design/       → Robot architecture and diagrams
+3. code/         → Arduino & ROS source files
+4. docs/         → Working envelope, specs, and planning
+5. README.md     → Project overview
