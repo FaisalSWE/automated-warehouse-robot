@@ -63,6 +63,6 @@ This guide explains how to set up the ROS2 and Gazebo environment to simulate th
 - Navigation node logs map receipt and path planning.
 - QR scanner node publishes detected QR codes to /qr_data.
 ## Troubleshooting
--Gazebo Crashes: Ensure GPU drivers are updated; reduce world complexity.
--ROS Node Errors: Verify colcon build completed successfully.
- QR Detection Fails: Check camera simulation settings in Gazebo.
+- Gazebo Crashes: Ensure GPU drivers are updated; reduce world complexity.
+- ROS Node Errors: Verify colcon build completed successfully.
+- QR Detection Fails: Check camera simulation settings in Gazebo.
