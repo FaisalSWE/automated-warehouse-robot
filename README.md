@@ -1,4 +1,4 @@
-# 🤖 Automated Food Warehouse Robot
+# Automated Food Warehouse Robot
 
 This project proposes the design and control logic for a **fully autonomous robot** that transforms a traditional food warehouse into a **smart, human-free logistics system**.
 
