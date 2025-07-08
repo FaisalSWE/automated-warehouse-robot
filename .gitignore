@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+*.egg-info/
+
+# ROS2
+code/ros_workspace/build/
+code/ros_workspace/install/
+code/ros_workspace/log/
+
+# Gazebo
+*.log
+*.world~
+
+# Temporary files
+*.swp
+*.swo
+*.tmp
+
+# IDE
+.vscode/
+.idea/
+
+# Misc
+*.bak
+*.backup
