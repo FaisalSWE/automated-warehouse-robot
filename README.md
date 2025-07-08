@@ -68,26 +68,47 @@ See [`docs/working_envelope.md`](docs/working_envelope.md) and [`design/working_
 - Gazebo: Simulation environment
 
 ## Repository Structure
+- `.gitignore` → Excludes build artifacts and temporary files
 - `algorithm/` → Execution logic
-- `code/` → ROS, Arduino, and vision scripts
+  - `warehouse_robot_algorithm.txt` → Algorithm overview
+- `code/` → Source code
+  - `algorithm.py` → Pseudocode for robot control
+  - `arduino/` → Arduino sketches
+    - `motor_control.ino` → Mecanum wheel control
   - `ros_workspace/src/warehouse_robot/` → ROS nodes and launch files
-  - `simulation/` → Gazebo world and URDF
-  - `vision/` → QR code detection
-  - `arduino/` → Motor control
+    - `nav_node.py` → Navigation node
+    - `launch/simulate_robot.launch.py` → Simulation launch file
+  - `simulation/` → Gazebo files
+    - `warehouse.world` → Warehouse environment
+    - `warehouse_robot.urdf` → Robot model
+  - `vision/` → Vision processing
+    - `qr_scanner.py` → QR code detection
 - `design/` → Robot and envelope diagrams
-- `docs/` → Specs and documentation
+  - `robot_design_diagram.txt` → Robot design placeholder
+  - `working_envelope_diagram.txt` → Working envelope placeholder
+- `docs/` → Documentation
+  - `simulation_setup.md` → Simulation setup guide
+  - `test_plan.md` → Testing strategy
+  - `test_results.md` → Test results log
+  - `working_envelope.md` → Working envelope specs
 - `README.md` → Project overview
 
 ## Progress
-- **Algorithm**: Detailed pseudocode in `code/algorithm.py` with food safety steps.
-- **Design**: Chassis, arm, and sensor specs in `design/robot_design_diagram.txt`; URDF in `code/simulation/`.
-- **Working Envelope**: Detailed specs in `docs/working_envelope.md`.
-- **Code**: ROS navigation node (`nav_node.py`), Arduino motor control (`motor_control.ino`), QR scanner (`qr_scanner.py`).
-- **Simulation**: Gazebo world (`warehouse.world`) and launch file (`simulate_robot.launch.py`).
-- **Next Steps**: Create CAD diagrams, test simulation, and prototype hardware.
+- **Algorithm**: Detailed pseudocode with food safety steps.
+- **Design**: Chassis, arm, and sensor specs; URDF for simulation.
+- **Working Envelope**: Detailed specs with food safety constraints.
+- **Code**: ROS navigation, Arduino motor control, QR scanner.
+- **Simulation**: Gazebo world and launch file.
+- **Testing**: Test plan and results placeholder.
+- **Next Steps**: Create CAD diagrams, run simulation tests, assemble hardware.
 
 ## Setup Instructions
 1. Clone the repository: `git clone https://github.com/FaisalSWE/automated-warehouse-robot.git`
-2. Install ROS2 Humble and Gazebo.
+2. Install ROS2 Humble and Gazebo (see `docs/simulation_setup.md`).
 3. Build ROS workspace: `cd code/ros_workspace && colcon build`
 4. Run simulation: `ros2 launch warehouse_robot simulate_robot.launch.py`
+5. Run QR scanner: `ros2 run warehouse_robot qr_scanner.py`
+
+## Testing
+- Follow `docs/test_plan.md` for simulation and hardware tests.
+- Log results in `docs/test_results.md`.
