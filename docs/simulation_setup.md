@@ -53,7 +53,7 @@ This guide explains how to set up the ROS2 and Gazebo environment to simulate th
 - Robot URDF (code/simulation/warehouse_robot.urdf)
 - Navigation node (code/ros_workspace/src/warehouse_robot/nav_node.py)
 
-3. **Run QR Scanner Node (in a new terminal):**
+2. **Run QR Scanner Node (in a new terminal):**
     ```bash
          source code/ros_workspace/install/setup.bash
          ros2 run warehouse_robot qr_scanner.py
