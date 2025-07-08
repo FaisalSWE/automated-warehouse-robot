@@ -1,0 +1,33 @@
+# Robot Design Diagram (Placeholder for CAD)
+
+## Overview
+- Type: Autonomous Mobile Robot (AMR) with 6-DOF arm
+- Purpose: warehouse automation (picking, placing, navigation)
+
+## Components
+- Chassis: 
+  - Material: Stainless steel (food-grade)
+  - Dimensions: 1m (L) x 0.6m (W) x 0.3m (H)
+  - Wheels: 4 Mecanum wheels (100mm diameter, DC motors, 100 RPM)
+- Robotic Arm:
+  - Type: 6-DOF manipulator
+  - Gripper: Soft silicone (food-safe), 5 kg payload
+  - Reach: 0.6–1.0m horizontal, 0–2.0m vertical
+- Sensors:
+  - LIDAR: RPLIDAR A1 (10m range, 360°)
+  - Ultrasonic: HC-SR04 (2–400cm range)
+  - Camera: Raspberry Pi Camera v2 (60° FOV, QR scanning)
+  - Temperature: DS18B20 (0–5°C for cold storage)
+- Controller:
+  - Main: Raspberry Pi 4 (4GB, ROS2)
+  - Secondary: Arduino Uno (motor/sensor control)
+- Power:
+  - Battery: 24V, 20Ah Li-ion (8-hour runtime)
+  - Charging: Auto-docking station (IR-guided, ±5cm precision)
+- Connectivity:
+  - Wi-Fi (MQTT/REST for WMS integration)
+
+## Notes
+- Diagram to be created in Fusion 360 or FreeCAD.
+- Food-grade materials ensure HACCP compliance.
+- Save final CAD as `design/robot_design_diagram.png`.
